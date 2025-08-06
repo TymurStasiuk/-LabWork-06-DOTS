@@ -1,0 +1,20 @@
+def check_match_from_position(P, T, k):
+    comparisons = 0
+    k -= 1
+    for i in range(len(P)):
+        if k + i >= len(T):
+            print("NO")
+            print(comparisons)
+            return
+        comparisons += 1
+        if P[i] != T[k + i]:
+            print("NO")
+            print(comparisons)
+            return
+    print("YES")
+    print(comparisons)
+
+P = input().strip()
+T = input().strip()
+k = int(input().strip())
+check_match_from_position(P, T, k)

@@ -1,0 +1,15 @@
+
+def find_occurrences(a, b):
+    positions = []
+    for i in range(len(a) - len(b) + 1):
+        if a[i:i + len(b)] == b:
+            positions.append(i + 1)
+    return positions
+
+a = input()
+b = input()
+
+result = find_occurrences(a, b)
+print(len(result))
+if result:
+    print(*result)

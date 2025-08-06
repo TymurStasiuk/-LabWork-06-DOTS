@@ -1,0 +1,9 @@
+S = input().strip()
+l, r = map(int, input().strip().split())
+
+substr = S[l-1:r]
+suffixes = [substr[i:] for i in range(len(substr) + 1)]
+
+print(len(suffixes))
+for s in sorted(suffixes[:-1], key=len, reverse=True):
+    print(s)
